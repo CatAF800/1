@@ -63,10 +63,10 @@ public class Task1 {
 
     }
 
-    public static void printMap(Map mp) {
+    public static void printMap(Map<Character, Integer> mp) {
         Iterator it = mp.entrySet().iterator();
         while (it.hasNext()) {
-            Map.Entry pair = (Map.Entry)it.next();
+            Map.Entry<Character, Integer> pair = (Map.Entry)it.next();
             System.out.println(pair.getKey() + " = " + pair.getValue());
             it.remove(); // avoids a ConcurrentModificationException
         }
